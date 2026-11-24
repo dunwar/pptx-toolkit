@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptx-toolkit"
+version = "0.1.0"
+description = "A small command-line toolkit for PowerPoint files: merge decks and compress embedded images."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "AIPPT.org" },
+]
+keywords = ["pptx", "powerpoint", "merge", "compress", "slides"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Office Suites",
+]
+dependencies = [
+    "python-pptx>=0.6.21",
+    "Pillow>=10.0",
+]
+
+[project.scripts]
+pptx-toolkit = "pptx_toolkit.cli:main"
+
+[project.urls]
+Homepage = "https://aippt.org"
+Repository = "https://github.com/dunwar/pptx-toolkit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
